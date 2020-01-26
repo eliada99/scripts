@@ -23,6 +23,7 @@ function displayMainMenu
 	echo "---Enter 3 for - IP: 10.7.101.30  - pxelnv030          --"
 	echo "---Enter 4 for - IP: 10.7.96.16   - pxelnv170          --"
 	echo "---Enter 5 for - IP: 10.7.6.168   - pxeibm168          --"
+        echo "---Enter 64 for- IP: 10.7.102.247 - pxelnv070          --"
 	echo "---Enter 100 for all servers - Not implemented yet     --"
 	echo "---------------------------------------------------------"
 	echo "------------Ibm Blade - CX3 only:------------------------"
@@ -54,8 +55,21 @@ function displayMainMenu
 	echo "---Enter 55 for - IP: Dell baldur 242                  --"
 	echo "---Enter 56 for - IP: Dell baldur 241                  --"
 	echo "---Enter 57 for - IP: Dell baldur 240                  --"
-	#echo "---Enter 58 for - IP:          --"
+	echo "---Enter 58 for - IP: oracle:perf-uek-01               --"
+        echo "---------------Fujitsu Servers---------------------------"
+        echo "---Enter 59 for - IP: pxefuj03                         --"
+        echo "---Enter 60 for - IP: pxefuj04                         --"
+        echo "---Enter 63 for - IP: qa-fjs04                         --"
 	echo "---------------------------------------------------------"
+        echo "---------------Stark-Lenovo Servers----------------------"
+        echo "---Enter 61 for - IP: qa-stark01                       --"
+        echo "---Enter 62 for - IP: qa-stark03                       --"
+        echo "---Enter 65 for - IP: qalenovo-11                      --"  
+        echo "---------------------------------------------------------"
+	echo "---Enter bfdell01 		-----------------------"
+	echo "---Enter bfdell02                 -----------------------"
+        echo "---Enter bfint02                  -----------------------"
+        echo "---Enter bfint03                  -----------------------"
 	echo "*********************************************************"
 	echo "*** Please enter your choice - press CTRL + C to exit ***"
 	echo "*********************************************************"
@@ -78,10 +92,10 @@ function checkWhichServerChoosen
 		'12')globalChoose=10.7.98.230 globalServerName='pxezt123' globalUserName='admin' globalUserPass='admin';;
 		'13')globalChoose=10.7.100.194 globalServerName='pxezt124' globalUserName='rcon' globalUserPass='3tango11';;
 		'20')globalChoose=10.7.126.8 globalServerName='Olympus MSFT' globalUserName='admin' globalUserPass='admin';;
-		'21')globalChoose=10.7.96.3 globalServerName='pxefuj01' globalUserName='rcon' globalUserPass='3tango11';;
+		'21')globalChoose=10.7.99.243 globalServerName='pxefuj01' globalUserName='admin' globalUserPass='admin';;
 		'22')globalChoose=10.7.103.67 globalServerName='pxequalcomm16' globalUserName='root' globalUserPass='3tango11!';;
 		'23')globalChoose=10.7.101.204 globalServerName='pxehp87 (GEN 10)' globalUserName='rcon' globalUserPass='3tango11';;
-		'24')globalChoose=10.7.98.206 globalServerName='pxehp206 (HPE Gen10)' globalUserName='root' globalUserPass='3tango11';;
+		'24')globalChoose=10.7.99.233 globalServerName='pxehp206 (HPE Gen10)' globalUserName='root' globalUserPass='3tango11';;
 		'25')globalChoose=10.7.103.91 globalServerName='pxehp091' globalUserName='root' globalUserPass='3tango11';;
 		'26')globalChoose=10.7.102.49 globalServerName='pxehp049' globalUserName='root' globalUserPass='3tango11';;
 		'27')globalChoose=10.7.4.236 globalServerName='pxehp237' globalUserName='root' globalUserPass='3tango11';;
@@ -95,6 +109,20 @@ function checkWhichServerChoosen
 		'55')globalChoose=10.7.112.142  globalServerName='pxedell242' globalUserName='root' globalUserPass='3tango11';;
 		'56')globalChoose=10.7.112.87  globalServerName='pxedell241' globalUserName='root' globalUserPass='3tango11';;
 		'57')globalChoose=10.7.112.86  globalServerName='pxedell240' globalUserName='root' globalUserPass='3tango11';;
+                '58')globalChoose=10.7.118.1  globalServerName='perf-uek-01' globalUserName='root' globalUserPass='3tango11';; 
+                '59')globalChoose=10.7.105.132 globalServerName='pxefuj03' globalUserName='admin' globalUserPass='admin';;
+                '60')globalChoose=10.7.105.134 globalServerName='pxefuj04' globalUserName='admin' globalUserPass='admin';;
+                '61')globalChoose=10.7.99.251 globalServerName='qa-stark01' globalUserName='USERID' globalUserPass='PASSW0RD';;
+                '62')globalChoose=10.7.99.253 globalServerName='qa-stark03' globalUserName='USERID' globalUserPass='PASSW0RD';;
+                '63')globalChoose=10.7.104.39 globalServerName='qa-fjs04' globalUserName='rcon' globalUserPass='3tango11';;
+                '64')globalChoose=10.7.102.247 globalServerName='pxelnv070' globalUserName='root' globalUserPass='3tango11';;
+                '65')globalChoose=10.7.106.111 globalServerName='qalenovo11' globalUserName='USERID' globalUserPass='PASSW0RD';;
+		'bfdell01')globalChoose=10.7.116.3 globalServerName='bfdell01' globalUserName='root' globalUserPass='3tango11';;
+		'bfdell02')globalChoose=10.7.106.3 globalServerName='bfdell02' globalUserName='root' globalUserPass='3tango11';;
+		'bfint02')globalChoose=bfint02-ilo globalServerName='bfint02' globalUserName='root' globalUserPass='3tango11';;
+		'bfint03')globalChoose=bfint03-ilo globalServerName='bfint03' globalUserName='root' globalUserPass='3tango11';;
+		
+
 		 *)clear  #Execute this section in every char/number that not appears above
 		   echo '---------------------------------------------------------'
 		   echo '--You have entered Wrong Input - its a good day to die!--'
